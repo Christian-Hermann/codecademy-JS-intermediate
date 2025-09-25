@@ -1,0 +1,1 @@
+# Codecademy – JS - Intermediate
