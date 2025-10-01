@@ -18,11 +18,4 @@ class Media {
   set isCheckedOut(value) {
     this._isCheckedOut = value;
   }
-  toggleCheckOutStatus() {
-    this._isCheckedOut = !this._isCheckedOut;
-  }
-  getAverageRating() {
-    let ratingsSum = this.ratings.reduce((acc, curr) => acc + curr, 0);
-    return ratingsSum / this.ratings.length;
-  }
 }
