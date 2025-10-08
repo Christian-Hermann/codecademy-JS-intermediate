@@ -13,3 +13,13 @@ const myExecutor = (resolve, reject) => {
     reject("That item is sold out.");
   }
 };
+
+function orderSunglasses() {
+  return new Promise(myExecutor);
+}
+
+const orderPromise = orderSunglasses();
+
+console.log(orderPromise);
+
+// The Node is setTimeout() Function
