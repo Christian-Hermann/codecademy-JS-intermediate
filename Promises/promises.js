@@ -36,3 +36,11 @@ setTimeout(usingSTO, 2000);
 console.log("This is the last line of code in app.js.");
 
 // Success and Failure Callback Functions
+const { checkInventory } = require("./library.js");
+
+const order = [
+  ["sunglasses", 1],
+  ["bags", 2],
+];
+
+// Write your code below:
