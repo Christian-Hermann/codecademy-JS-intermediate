@@ -34,3 +34,41 @@ setTimeout(usingSTO, 2000);
 
 // Keep the line below as the last line of code:
 console.log("This is the last line of code in app.js.");
+
+// Success and Failure Callback Functions
+const { checkInventory } = require("./library.js");
+
+const order = [
+  ["sunglasses", 1],
+  ["bags", 2],
+];
+
+// Write your code below:
+const handleSuccess = (resolvedValue) => {
+  console.log(resolvedValue);
+};
+
+const handleFailure = (rejectedValue) => {
+  console.log(rejectedValue);
+};
+
+checkInventory(order).then(handleSuccess, handleFailure);
+
+// Using catch() with Promises
+const { checkInventory } = require("./library.js");
+
+const order = [
+  ["sunglasses", 0],
+  ["bags", 2],
+];
+
+const handleSuccess = (resolvedValue) => {
+  console.log(resolvedValue);
+};
+
+const handleFailure = (rejectReason) => {
+  console.log(rejectReason);
+};
+
+// Write your code below:
+checkInventory(order).then(handleSuccess).catch(handleFailure);
