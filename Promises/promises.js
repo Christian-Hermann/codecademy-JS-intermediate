@@ -74,7 +74,7 @@ const handleFailure = (rejectReason) => {
 checkInventory(order).then(handleSuccess).catch(handleFailure);
 
 // Using Promise.all()
-const { checkAvailability } = require("./library.js");
+nconst { checkAvailability } = require("./library.js");
 
 const onFulfill = (itemsArray) => {
   console.log(`Items checked: ${itemsArray}`);
@@ -88,3 +88,11 @@ const onReject = (rejectionReason) => {
 };
 
 // Write your code below:
+const checkSunglasses = checkAvailability("sunglasses", "Favorite Supply Co.");
+
+const checkPants = checkAvailability('pants', 'Favorite Supply Co.')
+
+const checkBags = checkAvailability('bags', 'Favorite Supply Co.')
+
+Promise.all([checkSunglasses, checkPants, checkBags]).then(onFulfill).catch(onReject)
+
