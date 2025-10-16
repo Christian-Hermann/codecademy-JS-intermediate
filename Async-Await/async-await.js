@@ -14,3 +14,5 @@ withAsync(100).then((resolveValue) => {
     ` withAsync(100) returned a promise which resolved to: ${resolveValue}.`
   );
 });
+
+// The await Operator
