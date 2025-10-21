@@ -73,3 +73,5 @@ const shortenUrl = () => {
       renderResponse(jsonResponse);
     });
 };
+
+// Making an async GET request
