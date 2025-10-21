@@ -22,3 +22,25 @@ const getSuggestions = () => {
     }
   );
 };
+
+// Handling a GET request
+
+then((jsonResponse) => {
+  // renderRawResponse(jsonResponse)
+  renderResponse(jsonResponse);
+});
+
+// Making a POST request
+
+const shortenUrl = () => {
+  const urlToShorten = inputField.value;
+  const data = JSON.stringify({ destination: urlToShorten });
+  fetch(url, {
+    method: "POST",
+    headers: {
+      "Content-type": "application/json",
+      apikey: apiKey,
+    },
+    body: data,
+  });
+};
