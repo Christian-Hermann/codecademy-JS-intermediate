@@ -51,3 +51,14 @@ const getMovieInfo = async (movie) => {
     console.log(error);
   }
 };
+
+const showRandomMovie = async () => {
+  const movieInfo = document.getElementById("movieInfo");
+  if (movieInfo.childNodes.length > 0) {
+    clearCurrentMovie();
+  }
+  const movies = await getMovies();
+  const randomMovie = getRandomMovie(movies);
+  const info = await getMovieInfo(randomMovie);
+  displayMovie(info);
+};
