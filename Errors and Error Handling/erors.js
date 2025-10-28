@@ -52,3 +52,15 @@ console.log(Error("User missing name"));
 console.log("Will logging the error stop our program from running?");
 
 // The try... catch Statement
+try {
+  throw Error("This is an error!");
+} catch (e) {
+  console.log(e);
+}
+
+// JavaScript under the hood
+function changeColor(color) {
+  return function (obj) {
+    obj.color = color;
+  };
+}
