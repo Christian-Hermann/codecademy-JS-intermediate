@@ -64,3 +64,14 @@ function changeColor(color) {
     obj.color = color;
   };
 }
+
+// Hoisting
+var foo = function () {
+  return "I love Codecademy!";
+};
+
+function foo() {
+  return "Wow, JavaScript is pretty neat.";
+}
+let phrase = foo();
+console.log(phrase);
